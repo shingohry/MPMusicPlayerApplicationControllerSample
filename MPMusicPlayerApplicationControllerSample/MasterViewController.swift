@@ -12,6 +12,7 @@ import MediaPlayer
 class MasterViewController: UITableViewController {
     let musicPlayerApplicationController = MPMusicPlayerController.applicationQueuePlayer()
     var mediaItems: [MPMediaItem] = []
+    var finishedSetQueue = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,9 @@ class MasterViewController: UITableViewController {
         let previous = UIBarButtonItem(barButtonSystemItem: .rewind,
                                        target: self,
                                        action: #selector(didTapPrevButton(_:)))
+        let play = UIBarButtonItem(barButtonSystemItem: .play,
+                                   target: self,
+                                   action: #selector(didTapPlayButton(_:)))
         let next = UIBarButtonItem(barButtonSystemItem: .fastForward,
                                    target: self,
                                    action: #selector(didTapNextButton(_:)))
@@ -35,6 +39,7 @@ class MasterViewController: UITableViewController {
             flexible,
             previous,
             flexible,
+            play,
             flexible,
             next,
             flexible
@@ -51,6 +56,15 @@ class MasterViewController: UITableViewController {
         musicPlayerApplicationController.skipToPreviousItem()
     }
     
+    func didTapPlayButton(_ sender: Any) {
+        let playbackState = musicPlayerApplicationController.playbackState
+        if playbackState == .playing {
+            musicPlayerApplicationController.pause()
+        } else if playbackState == .stopped || playbackState == .paused {
+            musicPlayerApplicationController.play()
+        }
+    }
+    
     func didTapNextButton(_ sender: Any) {
         musicPlayerApplicationController.skipToNextItem()
     }
@@ -63,13 +77,33 @@ class MasterViewController: UITableViewController {
         present(picker, animated: true, completion: nil)
     }
     
-    func setQueueAndPlay(mediaItemCollection: MPMediaItemCollection) {
+    func setQueue(mediaItemCollection: MPMediaItemCollection) {
         mediaItems = mediaItemCollection.items
         tableView.reloadData()
         
-        // setQueue and play
+        // setQueue and prepare
         musicPlayerApplicationController.setQueue(with: mediaItemCollection)
-        musicPlayerApplicationController.play()
+        musicPlayerApplicationController.nowPlayingItem = mediaItemCollection.items.first
+    }
+    
+    func insertQueue(mediaItemCollection: MPMediaItemCollection) {
+        // Update Player's Queue
+        musicPlayerApplicationController.performQueueTransaction({ mutableQueue in
+            print("mutableQueue.items.count:", mutableQueue.items.count)
+            print("mediaItemCollection.items.count:", mediaItemCollection.items.count)
+            
+            // This code is not work with iOS 10.3 beta 1
+            let descriptor = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: mediaItemCollection)
+            mutableQueue.insert(descriptor,
+                                after: mutableQueue.items.last)
+            // 
+            
+        }, completionHandler: {queue, error in
+            print("queue.items.count:", queue.items.count)
+            
+            self.mediaItems = queue.items
+            self.tableView.reloadData()
+        })
     }
 }
 
@@ -112,8 +146,14 @@ extension MasterViewController {
 // MARK: - MPMediaPickerControllerDelegate
 extension MasterViewController: MPMediaPickerControllerDelegate {
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
-        // call private method
-        setQueueAndPlay(mediaItemCollection: mediaItemCollection)
+        if finishedSetQueue {
+            // after the 2nd time
+            insertQueue(mediaItemCollection: mediaItemCollection)
+        } else {
+            // first time
+            setQueue(mediaItemCollection: mediaItemCollection)
+            finishedSetQueue = true
+        }
         
         mediaPicker.dismiss(animated: true, completion: nil)
     }
