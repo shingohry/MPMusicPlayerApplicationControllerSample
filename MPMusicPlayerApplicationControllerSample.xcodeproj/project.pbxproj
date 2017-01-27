@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C95FB6251E3B3145008C33DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FB6241E3B3145008C33DB /* AppDelegate.swift */; };
+		C95FB6271E3B3145008C33DB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FB6261E3B3145008C33DB /* MasterViewController.swift */; };
+		C95FB6291E3B3145008C33DB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FB6281E3B3145008C33DB /* DetailViewController.swift */; };
+		C95FB62C1E3B3145008C33DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95FB62A1E3B3145008C33DB /* Main.storyboard */; };
+		C95FB62E1E3B3145008C33DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C95FB62D1E3B3145008C33DB /* Assets.xcassets */; };
+		C95FB6311E3B3145008C33DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95FB62F1E3B3145008C33DB /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C95FB6211E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPMusicPlayerApplicationControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95FB6241E3B3145008C33DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C95FB6261E3B3145008C33DB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C95FB6281E3B3145008C33DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C95FB62B1E3B3145008C33DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C95FB62D1E3B3145008C33DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C95FB6301E3B3145008C33DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C95FB6321E3B3145008C33DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C95FB61E1E3B3145008C33DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C95FB6181E3B3145008C33DB = {
+			isa = PBXGroup;
+			children = (
+				C95FB6231E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample */,
+				C95FB6221E3B3145008C33DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C95FB6221E3B3145008C33DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C95FB6211E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C95FB6231E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample */ = {
+			isa = PBXGroup;
+			children = (
+				C95FB6241E3B3145008C33DB /* AppDelegate.swift */,
+				C95FB6261E3B3145008C33DB /* MasterViewController.swift */,
+				C95FB6281E3B3145008C33DB /* DetailViewController.swift */,
+				C95FB62A1E3B3145008C33DB /* Main.storyboard */,
+				C95FB62D1E3B3145008C33DB /* Assets.xcassets */,
+				C95FB62F1E3B3145008C33DB /* LaunchScreen.storyboard */,
+				C95FB6321E3B3145008C33DB /* Info.plist */,
+			);
+			path = MPMusicPlayerApplicationControllerSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C95FB6201E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C95FB6351E3B3145008C33DB /* Build configuration list for PBXNativeTarget "MPMusicPlayerApplicationControllerSample" */;
+			buildPhases = (
+				C95FB61D1E3B3145008C33DB /* Sources */,
+				C95FB61E1E3B3145008C33DB /* Frameworks */,
+				C95FB61F1E3B3145008C33DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPMusicPlayerApplicationControllerSample;
+			productName = MPMusicPlayerApplicationControllerSample;
+			productReference = C95FB6211E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C95FB6191E3B3145008C33DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = hiraya.shingo;
+				TargetAttributes = {
+					C95FB6201E3B3145008C33DB = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = R6USV66H63;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C95FB61C1E3B3145008C33DB /* Build configuration list for PBXProject "MPMusicPlayerApplicationControllerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C95FB6181E3B3145008C33DB;
+			productRefGroup = C95FB6221E3B3145008C33DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C95FB6201E3B3145008C33DB /* MPMusicPlayerApplicationControllerSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C95FB61F1E3B3145008C33DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95FB6311E3B3145008C33DB /* LaunchScreen.storyboard in Resources */,
+				C95FB62E1E3B3145008C33DB /* Assets.xcassets in Resources */,
+				C95FB62C1E3B3145008C33DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C95FB61D1E3B3145008C33DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95FB6291E3B3145008C33DB /* DetailViewController.swift in Sources */,
+				C95FB6271E3B3145008C33DB /* MasterViewController.swift in Sources */,
+				C95FB6251E3B3145008C33DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C95FB62A1E3B3145008C33DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C95FB62B1E3B3145008C33DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C95FB62F1E3B3145008C33DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C95FB6301E3B3145008C33DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C95FB6331E3B3145008C33DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C95FB6341E3B3145008C33DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C95FB6361E3B3145008C33DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R6USV66H63;
+				INFOPLIST_FILE = MPMusicPlayerApplicationControllerSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shingohry.MPMusicPlayerApplicationControllerSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C95FB6371E3B3145008C33DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R6USV66H63;
+				INFOPLIST_FILE = MPMusicPlayerApplicationControllerSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shingohry.MPMusicPlayerApplicationControllerSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C95FB61C1E3B3145008C33DB /* Build configuration list for PBXProject "MPMusicPlayerApplicationControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C95FB6331E3B3145008C33DB /* Debug */,
+				C95FB6341E3B3145008C33DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C95FB6351E3B3145008C33DB /* Build configuration list for PBXNativeTarget "MPMusicPlayerApplicationControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C95FB6361E3B3145008C33DB /* Debug */,
+				C95FB6371E3B3145008C33DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C95FB6191E3B3145008C33DB /* Project object */;
+}
