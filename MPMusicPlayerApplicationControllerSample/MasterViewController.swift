@@ -92,7 +92,7 @@ class MasterViewController: UITableViewController {
             print("mutableQueue.items.count:", mutableQueue.items.count)
             print("mediaItemCollection.items.count:", mediaItemCollection.items.count)
             
-            // This code is not work with iOS 10.3 beta 1
+            // This code is not work with iOS 10.3 beta 2
             let descriptor = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: mediaItemCollection)
             mutableQueue.insert(descriptor,
                                 after: mutableQueue.items.last)
