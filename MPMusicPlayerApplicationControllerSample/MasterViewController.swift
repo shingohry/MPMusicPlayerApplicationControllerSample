@@ -92,11 +92,20 @@ class MasterViewController: UITableViewController {
             print("mutableQueue.items.count:", mutableQueue.items.count)
             print("mediaItemCollection.items.count:", mediaItemCollection.items.count)
             
-            // This code is not work with iOS 10.3 beta 2
-            let descriptor = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: mediaItemCollection)
+            // MPMusicPlayerControllerMutableQueue insert don't work with MPMusicPlayerMediaItemQueueDescriptor constructed with MPMediaItemCollection.
+            // This bug Reproduced with iOS 10.3 beta 5
+//            let descriptor = MPMusicPlayerMediaItemQueueDescriptor(itemCollection: mediaItemCollection)
+//            mutableQueue.insert(descriptor,
+//                                after: mutableQueue.items.last)
+            
+            // Therefore, use MPMusicPlayerMediaItemQueueDescriptor constructed with MPMediaQuery.
+            let predicate = MPMediaPropertyPredicate(value: mediaItemCollection.representativeItem!.persistentID,
+                                                     forProperty: MPMediaItemPropertyPersistentID)
+            let query = MPMediaQuery(filterPredicates: [predicate])
+            let descriptor = MPMusicPlayerMediaItemQueueDescriptor(query: query)
+            
             mutableQueue.insert(descriptor,
                                 after: mutableQueue.items.last)
-            // 
             
         }, completionHandler: {queue, error in
             print("queue.items.count:", queue.items.count)
